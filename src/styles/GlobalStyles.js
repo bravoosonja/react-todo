@@ -14,6 +14,8 @@ body {
     margin:0;
     padding:0;
     box-sizing: border-box;
+    width:100%;
+    height:100vh;
     background-color: ${({ theme }) => theme.background};
 }
 
@@ -36,6 +38,18 @@ p {
 span {
     color: ${({ theme }) => theme.subText};
     font-size: 16px;
+}
+
+ul,li {
+  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }) => theme.formBackground};
+  font-size: 18px;
+  padding: 1rem 1.3rem;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  list-style: none;
 }
 
 input[type=text] {

@@ -22,6 +22,7 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <Wrapper>
+        <BackgroundImg />
         <Overlay>
           <Header theme={theme} toggleTheme={themeToggler} />
           <main>
@@ -30,8 +31,6 @@ function App() {
             </section>
             <section>
               <TodoItem />
-            </section>
-            <section>
               <Todos />
             </section>
           </main>
@@ -52,6 +51,9 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+`;
+
+const BackgroundImg = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,10 +73,12 @@ const Wrapper = styled.div`
 
 const Overlay = styled.div`
   position: absolute;
+  top: 3vh;
   width: 100%;
+  height: 100%;
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 `;

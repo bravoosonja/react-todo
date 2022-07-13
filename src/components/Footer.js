@@ -12,10 +12,13 @@ const StyledFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   bottom: 0;
-  padding: 2.5rem;
+  width: 100%;
+  padding: 2.5rem 0;
   p {
     color: ${({ theme }) => theme.subText};
+    font-size: 16px;
+    font-style: italic;
   }
 `;
