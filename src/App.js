@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import NewTodo from "./components/NewTodo";
 import TodoItem from "./components/TodoItem";
 import Todos from "./components/Todos";
+import Footer from "./components/Footer";
 // hooks
 import { useLightMode } from "./hooks/useLightMode";
 // styles
@@ -23,11 +24,22 @@ function App() {
       <Wrapper>
         <Overlay>
           <Header theme={theme} toggleTheme={themeToggler} />
-          <NewTodo />
-          <TodoItem />
-          <Todos />
+          <main>
+            <section>
+              <NewTodo />
+            </section>
+            <section>
+              <TodoItem />
+            </section>
+            <section>
+              <Todos />
+            </section>
+          </main>
         </Overlay>
       </Wrapper>
+      <footer>
+        <Footer />
+      </footer>
     </ThemeProvider>
   );
 }
@@ -40,7 +52,6 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

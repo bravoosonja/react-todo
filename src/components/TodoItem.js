@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export default function TodoItem({ text, onRemoveTodo }) {
-  return <p onClick={onRemoveTodo}>{text}</p>;
+export default function TodoItem(props) {
+  return <p onClick={props.onRemoveTodo}>{props.text}</p>;
 }
