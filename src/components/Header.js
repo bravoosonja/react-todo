@@ -1,4 +1,3 @@
-import React, { Children } from "react";
 import styled from "styled-components";
 // icons
 import { ReactComponent as Sun } from "../assets/images/icon-sun.svg";

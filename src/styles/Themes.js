@@ -18,8 +18,8 @@ export const darkTheme = {
 };
 
 export const lightTheme = {
-  desktopBG: DesktopLightImage,
-  mobileBG: MobileLightImage,
+  desktopBg: DesktopLightImage,
+  mobileBg: MobileLightImage,
 
   text: "hsl(236, 9%, 61%)",
   hoverText: "hsl(235, 19%, 35%)",

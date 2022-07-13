@@ -46,13 +46,13 @@ const Wrapper = styled.div`
   background-size: cover;
 
   @media (min-width: 375px) {
-    background-image: url(${(props) => props.theme.mobileBg});
+    background-image: url(${({ theme }) => theme.mobileBg});
     width: 100vw;
     height: 200px;
   }
 
   @media (min-width: 1440px) {
-    background-image: url(${(props) => props.theme.desktopBg});
+    background-image: url(${({ theme }) => theme.desktopBg});
     width: 100vw;
     height: 300px;
   }
