@@ -20,16 +20,19 @@ export default function NewTodo() {
   };
 
   return (
-    <Wrapper>
-      <StyledForm onSubmit={submitHandler}>
-        <input
-          type="text"
-          id="text"
-          ref={textInputRef}
-          placeholder="Add new todo"
-        />
-      </StyledForm>
-    </Wrapper>
+    //<Wrapper>
+    <form onSubmit={submitHandler}>
+      <input
+        type="text"
+        id="text"
+        ref={textInputRef}
+        placeholder="Add new todo"
+      />
+      <button type="submit" onClick={submitHandler}>
+        Add to do
+      </button>
+    </form>
+    //</Wrapper>
   );
 }
 
@@ -43,8 +46,7 @@ const Wrapper = styled.div`
 `;
 
 const StyledForm = styled.form`
-  width: 40vw;
-  input {
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  }
+  /* button {
+    display: none;
+  } */
 `;

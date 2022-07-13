@@ -26,13 +26,9 @@ function App() {
         <Overlay>
           <Header theme={theme} toggleTheme={themeToggler} />
           <main>
-            <section>
-              <NewTodo />
-            </section>
-            <section>
-              <TodoItem />
-              <Todos />
-            </section>
+            <NewTodo />
+            <TodoItem />
+            <Todos />
           </main>
         </Overlay>
       </Wrapper>
@@ -82,5 +78,7 @@ const Overlay = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
+const Content = styled.div``;
 
 export default App;

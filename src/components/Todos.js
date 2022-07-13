@@ -8,24 +8,24 @@ export default function Todos() {
   const todoCtx = useContext(TodoContext);
 
   return (
-    <Wrapper>
-      <ul>
-        {todoCtx.items.map((item) => (
-          <TodoItem
-            key={item.id}
-            text={item.text}
-            onRemoveTodo={todoCtx.removeTodo.bind(null, item.id)}
-          />
-        ))}
-      </ul>
-    </Wrapper>
+    // <Wrapper>
+    <ul>
+      {todoCtx.items.map((item) => (
+        <TodoItem
+          key={item.id}
+          text={item.text}
+          onRemoveTodo={todoCtx.removeTodo.bind(null, item.id)}
+        />
+      ))}
+    </ul>
+    // </Wrapper>
   );
 }
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40vw;
-  height: 100%;
-`;
+// const Wrapper = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 40vw;
+//   height: 100%;
+// `;

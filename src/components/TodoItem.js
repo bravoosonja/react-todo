@@ -1,17 +1,13 @@
 import styled from "styled-components";
 
 export default function TodoItem(props) {
-  return (
-    <Wrapper>
-      <li onClick={props.onRemoveTodo}>{props.text}</li>
-    </Wrapper>
-  );
+  return <li onClick={props.onRemoveTodo}>{props.text}</li>;
 }
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40vw;
-  height: 100%;
-`;
+// const Wrapper = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 40vw;
+//   height: 100%;
+// `;

@@ -50,6 +50,10 @@ ul,li {
   outline: none;
   border: none;
   list-style: none;
+
+  :focus {
+            outline: 1px solid  ${({ theme }) => theme.text};
+        }
 }
 
 input[type=text] {
@@ -67,7 +71,22 @@ input[type=text] {
         }
 
         :focus {
-            outline:none;
+            outline: 1px solid  ${({ theme }) => theme.text};
+           
         }
-    }
+
+        :active {
+            background-color: ${({ theme }) => theme.formBackground};
+            color: ${({ theme }) => theme.text};
+            outline: 1px solid  ${({ theme }) => theme.text};
+        }
+}
+
+form {
+    width:40vw;
+    input {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+}
+
 `;

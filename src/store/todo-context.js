@@ -6,7 +6,7 @@ export const TodoContext = createContext({
   removeTodo: (id) => {},
 });
 
-export const TodoContextProvider = ({ children }) => {
+export const TodoContextProvider = ({ props }) => {
   const [todos, setTodos] = useState([]);
 
   const addTodoHandler = (todoText) => {
@@ -30,6 +30,6 @@ export const TodoContextProvider = ({ children }) => {
   };
 
   return (
-    <TodoContext.Provider value={contextValue}>{children}</TodoContext.Provider>
+    <TodoContext.Provider value={contextValue}>{props}</TodoContext.Provider>
   );
 };
