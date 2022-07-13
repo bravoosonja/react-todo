@@ -15,8 +15,12 @@ export default function Header({ theme, toggleTheme }) {
 }
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 1.3rem;
   }
 `;

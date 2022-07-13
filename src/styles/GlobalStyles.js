@@ -40,14 +40,20 @@ span {
 
 input[type=text] {
     color: ${({ theme }) => theme.text};
-    color: ${({ theme }) => theme.formBackground};
+    background-color: ${({ theme }) => theme.formBackground};
     font-size: 18px;
-    padding:0.5rem 1rem;
+    padding:1rem 1.3rem;
     width:100%; 
     border-radius: 5px;
-    
+    outline: none;
+    border:none;
+
         ::placeholder {
             color: ${({ theme }) => theme.subText};
+        }
+
+        :focus {
+            outline:none;
         }
     }
 `;

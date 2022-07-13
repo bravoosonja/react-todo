@@ -5,7 +5,7 @@ export const useLightMode = () => {
   const [mountedComponent, setMountedComponent] = useState(false);
 
   const setMode = (mode) => {
-    window.localStorage.setItem("theme", mode);
+    localStorage.setItem("theme", mode);
     setTheme(mode);
   };
 
@@ -14,8 +14,15 @@ export const useLightMode = () => {
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme");
-    localTheme ? setTheme(localTheme) : setMode("dark");
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme:dark)").matches;
+    if (savedTheme && ["dark", "light"].includes(savedTheme)) {
+      setTheme(savedTheme);
+    } else if (prefersDark) {
+      setTheme("dark");
+    }
     setMountedComponent(true);
   }, []);
 
